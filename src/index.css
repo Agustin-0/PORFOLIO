@@ -1,1 +1,164 @@
-@import "tailwindcss"
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+html { scroll-behavior: smooth; }
+
+@theme{
+    --color-darkmode-primary: #272727;
+    --color-darkmode-secundary: #232324;
+    --color-darkText-primary: #FEFEFE;
+    --color-darkText-secundary: #8A8A8A;
+
+    --color-lightmode-primary: #DEDEDE;
+    --color-lightmode-secundary: #FEFEFE;
+    --color-lightText-primary: #282829;
+    --color-lightText-secundary: #57595B;
+}
+
+:root {
+  /* ===================================================
+     1. TAMAÑOS EN MÓVIL (Mobile-First)
+     =================================================== */
+  /* Títulos */
+  --font-size-h1: 2.25rem;     /* 36px (Rango 32–40px) */
+  --font-size-h2: 1.875rem;    /* 30px (Rango 28–32px) */
+  --font-size-h3: 1.625rem;    /* 26px (Rango 24–28px) */
+  --font-size-h4: 1.3125rem;   /* 21px (Rango 20–22px) */
+  --font-size-h5: 1.125rem;    /* 18px */
+  --font-size-h6: 1rem;        /* 16px */
+
+  /* Textos, Componentes e UI */
+  --font-size-body: 1rem;       /* 16px */
+  --font-size-secondary: 0.875rem; /* 14px (Notas / Texto secundario) */
+  --font-size-btn-lg: 1rem;    /* 16px (Botón grande) */
+  --font-size-btn-sm: 0.875rem;/* 14px (Botón chico) */
+  --font-size-input: 0.875rem; /* 14px (Inputs y Labels) */
+  --font-size-nav: 0.9375rem;  /* 15px (Links de Menú / Nav: 14-16px) */
+  --font-size-small: 0.75rem;  /* 12px (Small text / Letra chica) */
+
+  /* Pesos Tipográficos (Font Weights) */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+
+  /* Line Heights recomendados */
+  --leading-headings: 1.25;    /* 120–130% para títulos */
+  --leading-body: 1.6;         /* 150–170% para párrafos y lectura */
+  --leading-ui: 1.35;          /* 120–140% para botones, inputs, etc. */
+}
+
+/* ===================================================
+   2. TAMAÑOS EN ESCRITORIO (Desktop: >= 768px)
+   =================================================== */
+@media (min-width: 768px) {
+  :root {
+    /* Títulos */
+    --font-size-h1: 3.5rem;      /* 56px (Rango 48–64px) */
+    --font-size-h2: 2.625rem;    /* 42px (Rango 36–48px) */
+    --font-size-h3: 1.875rem;    /* 30px (Rango 28–32px) */
+    --font-size-h4: 1.4375rem;   /* 23px (Rango 22–24px) */
+    --font-size-h5: 1.1875rem;   /* 19px (Rango 18–20px) */
+    --font-size-h6: 1rem;        /* 16px */
+
+    /* Textos, Componentes e UI */
+    --font-size-body: 1.0625rem; /* 17px (Rango 16–18px) */
+    --font-size-secondary: 0.875rem; /* 14px */
+    --font-size-btn-lg: 1.0625rem;/* 17px (Rango 16–18px) */
+    --font-size-btn-sm: 0.9375rem;/* 15px (Rango 14–16px) */
+    --font-size-input: 0.9375rem; /* 15px (Rango 14–16px) */
+    --font-size-nav: 1rem;       /* 16px */
+    --font-size-small: 0.75rem;  /* 12px */
+  }
+}
+
+/* ===================================================
+   3. APLICACIÓN DE ESTILOS GLOBALES
+   =================================================== */
+html {
+  font-size: 16px; /* Base del navegador */
+}
+
+body {
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--leading-body);
+}
+
+/* Encabezados */
+h1 {
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-extrabold);
+  line-height: var(--leading-headings);
+}
+
+h2 {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--leading-headings);
+}
+
+h3 {
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--leading-headings);
+}
+
+h4 {
+  font-size: var(--font-size-h4);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--leading-headings);
+}
+
+h5 {
+  font-size: var(--font-size-h5);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--leading-headings);
+}
+
+h6 {
+  font-size: var(--font-size-h6);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--leading-headings);
+}
+
+/* Clases de Utilidad para UI y Textos */
+.text-secondary,
+.text-muted {
+  font-size: var(--font-size-secondary);
+  line-height: var(--leading-body);
+}
+
+.text-small,
+small {
+  font-size: var(--font-size-small);
+  line-height: var(--leading-headings);
+}
+
+.btn-large {
+  font-size: var(--font-size-btn-lg);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--leading-ui);
+}
+
+.btn-small {
+  font-size: var(--font-size-btn-sm);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--leading-ui);
+}
+
+input,
+select,
+textarea,
+label {
+  font-size: var(--font-size-input);
+  line-height: var(--leading-ui);
+}
+
+.nav-link {
+  font-size: var(--font-size-nav);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--leading-ui);
+}

@@ -1,32 +1,58 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import { useTheme } from "../../hooks/useTheme";
+import { IoMenu } from "react-icons/io5";
 
-function Navbar() {
+// aca deberiamos separar responsibilidades para mejorar el codigo o hacerlo mas legible 
+
+function NavbarMobile() {
   const [isOpen, setIsOpen] = useState(false);
+  const { theme, toggleTheme } = useTheme();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
   return (
-    <div className="bg-neutral-300 dark:bg-gray-800 static">
-      <div onClick={toggleMenu}>☰</div>
-      <div
-        className={`absolute z-10 top-0 left-0 h-screen w-1/2 bg-black opacity-70 ${isOpen ? "visible" : "hidden"}`}
-      ></div>
-      <div
-        className={`absolute z-10 top-0 right-0 h-screen w-1/2 bg-violet-300 transform
-        ${isOpen ? "visible" : "hidden"}`}
-      >
-        <div onClick={toggleMenu}>X</div>
-        <ul className="flex flex-col aling-center items-center">
-          <li>home</li>
-          <li>s</li>
-          <li>lorea</li>
-          <li></li>
-        </ul>
+    <div className="bg-lightmode-secundary dark:bg-darkmode-primary static">
+      {/* NavbarMobile MOVILE */}
+      <div className="md:hidden">
+        <div className="bg-lightmode-secundary dark:bg-darkmode-primary dark:text-darkText-primary" onClick={toggleMenu}>
+          <IoMenu className="size-8" />
+        </div>
+        <div onClick={toggleMenu} className={`absolute z-10 top-0 left-0 h-screen w-1/2 bg-black opacity-70 
+            transform transition-transform duration-300 ease-in-out
+            ${isOpen ? "translate-x-0" : "-translate-x-full"}`}
+        ></div>
+        <div
+          className={`absolute z-10 top-0 right-0 h-screen w-1/2 bg-violet-300 
+        transform transition-transform duration-300 ease-in-out
+        ${isOpen ? "translate-x-0" : "translate-x-full"}`}
+        >
+          <div className="flex justify-end p-4" onClick={toggleMenu}>X</div>
+          <div className="flex flex-col items-center gap-2">
+            <a href="#presentacion" className="dark:text-lightmode-primary font-medium">Presentacion</a>
+            <a href="#experiencia" className="dark:text-lightmode-primary font-medium">Experiencia</a>
+            <a href="#proyectos" className="dark:text-lightmode-primary font-medium">Proyectos</a>
+            <a href="#tecnologias" className="dark:text-lightmode-primary font-medium">Tecnologías</a>
+              <button onClick={toggleTheme}>
+                {theme === "dark" ? "☀️" : "🌙"}
+              </button>
+          </div>
+        </div>
       </div>
+
+      <div className="hidden md:block py-4 px-4">
+        <nav className="flex justify-center items-center gap-4">
+          <a href="#presentacion" className="dark:text-lightmode-primary font-medium">Presentacion</a>
+          <a href="#experiencia" className="dark:text-lightmode-primary font-medium">Experiencia</a>
+          <a href="#proyectos" className="dark:text-lightmode-primary font-medium">Proyectos</a>
+          <a href="#tecnologias" className="dark:text-lightmode-primary font-medium">Tecnologías</a>
+          <button onClick={toggleTheme}>{theme === "dark" ? "☀️" : "🌙"}</button>
+        </nav>
+      </div>
+
     </div>
   );
 }
 
-export default Navbar;
+export default NavbarMobile;

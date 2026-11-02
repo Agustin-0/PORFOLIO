@@ -1,15 +1,19 @@
-
-import React from 'react'
-import Navbar from './components/layout/Navbar';
 import Header from './components/layout/Header';
-import Presentacion from './components/layout/Presentacion';
+import Presentation from './components/sections/Presentation';
+import Experiencia from './components/sections/Experiencia';
+import Projects from './components/sections/Projects';
+import Technologies from './components/sections/Technologies';
+import Footer from './components/layout/Footer';
 
 function App() {
-  {/*faltanlos estilos*/}
   return (
     <>
       <Header />
-      <Presentacion />
+      <Presentation />
+      <Experiencia />
+      <Projects />
+      <Technologies />
+      <Footer />
     </>
   )
 }
