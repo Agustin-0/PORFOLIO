@@ -2,10 +2,10 @@ import { MdOutlineWorkOutline } from "react-icons/md";
 import Section from "../layout/Section";
 import Container from "../layout/Container";
 
-function Experiencia() {
+function Experience() {
     return (
         <>
-            <Section id="experiencia">
+            <Section id="Experience">
                 <Container>
                     <div>
                         <header className="flex items-center gap-4 mb-8">
@@ -34,4 +34,4 @@ function Experiencia() {
     )
 }
 
-export default Experiencia
+export default Experience

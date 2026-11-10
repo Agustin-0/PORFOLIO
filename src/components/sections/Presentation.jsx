@@ -16,7 +16,7 @@ function Presentation() {
                         <header className="flex flex-col-reverse gap-8 justify-center mb-16">
                             <div>
                                 <h1 className="text-9xl dark:text-darkText-primary">
-                                    Desarrollador <span className="text-amber-300 font-medium">FrontEnd</span>
+                                    Desarrollador <span className="text-amber-300 font-medium">Frontend</span>
                                 </h1>
                                 <h2 className="dark:text-darkText-primary">Agustin Gutierrez</h2>
                             </div>
@@ -57,7 +57,7 @@ function Presentation() {
                                     <AiOutlineMail className="text-lightText-primary group-hover:text-lightmode-primary size-8
                                                  dark:text-darkText-primary dark:group-hover:text-lightText-primary" />
                                     <span className="text-lightText-primary group-hover:text-lightmode-primary dark:text-darkText-primary dark:group-hover:text-lightText-primary">
-                                        contacto
+                                        Contacto
                                     </span>
                                 </a>
 
