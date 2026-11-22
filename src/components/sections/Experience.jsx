@@ -7,7 +7,7 @@ function Experience() {
         <>
             <Section id="Experience">
                 <Container>
-                    <div>
+                    <div data-aos="fade-up">
                         <header className="flex items-center gap-4 mb-8">
                             <MdOutlineWorkOutline className="size-8 dark:text-darkText-primary" />
                             <h2 className="text-2xl font-medium dark:text-darkText-primary">Experiencia laboral</h2>

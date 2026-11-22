@@ -14,7 +14,7 @@ function Presentation() {
                 <Container>
                     <div className="dark:bg-darkmode-secundary mt-10 md:mt-0 md:py-12 sm:pt-24">
                         <header className="flex flex-col-reverse gap-8 justify-center mb-16">
-                            <div>
+                            <div data-aos="fade-up">
                                 <h1 className="text-9xl dark:text-darkText-primary">
                                     Desarrollador <span className="text-amber-300 font-medium">Frontend</span>
                                 </h1>
@@ -22,10 +22,10 @@ function Presentation() {
                             </div>
                             <img src={ImgMorty} alt="Una imagen de ejemplo de Morty" className=" rounded-full w-24 h-24" />
                         </header>
-                        <p className="dark:text-darkText-primary">
+                        <p className="dark:text-darkText-primary" data-aos="fade-up">
                             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore quae facere repellat hic voluptatum asperiores minus reiciendis dolores recusandae, cumque optio? Explicabo
                         </p>
-                        <nav className="pt-4">
+                        <nav className="pt-4" data-aos="fade-up">
                             <ul className="flex justify-items-start items-center flex-wrap gap-2">
 
                                 <a target="_blank" href="https://github.com/Agustin-0"

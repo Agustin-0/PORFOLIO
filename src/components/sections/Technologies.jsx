@@ -6,7 +6,7 @@ export default function Technologies() {
         <>
             <Section id="tecnologias">
                 <Container>
-                    <div className="flex flex-col items-center gap-8 text-center">
+                    <div data-aos="fade-up" className="flex flex-col items-center gap-8 text-center">
                         <h2 className="text-4xl text-darkText-primary">Tecnologías</h2>
                         <div className="">
                             <h3 className="text-lightText-primary dark:text-darkText-primary">FrontEnd</h3>

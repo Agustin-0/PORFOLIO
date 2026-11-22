@@ -11,7 +11,6 @@ const projectsList = [
         "title": "Inglish cards",
         "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate maxime velit enim laudantium, laborum quidem porro dolorem expedita amet repellendus sit aperiam dicta dolore iure, eius maiores veritatis est magnam.",
         "url": "https://inglish-cards.vercel.app/",
-        "colorShadow": "#FEDA64",
     },
     {
         "id": 2,
@@ -20,7 +19,6 @@ const projectsList = [
         "title": "Inglish cards",
         "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate maxime velit enim laudantium, laborum quidem porro dolorem expedita amet repellendus sit aperiam dicta dolore iure, eius maiores veritatis est magnam.",
         "url": "https://inglish-cards.vercel.app/",
-        "colorShadow": "#FEDA64",
     }
 ]
 
@@ -28,7 +26,7 @@ function Projects() {
   return (
     <Section id="proyectos">
       <Container>
-        <div className='flex flex-col'>
+        <div  data-aos="fade-up" className='flex flex-col'>
           <h2 className='pb-6 text-center text-lightText-primary dark:text-darkText-primary'>
             Mis proyectos
           </h2>

@@ -1,11 +1,11 @@
 import { FaArrowRight } from "react-icons/fa";
 
-function Card({img, imgAlt, title, text, url, colorShadow }) {
+function Card({img, imgAlt, title, text, url }) {
 
   return (
     <>
     <a href={url} target="_blank" rel="noopener noreferrer" className={`bg-lightmode-secundary dark:bg-darkmode-primary flex flex-col gap-6 rounded-3xl 
-        md:rounded-md shadow-md shadow-[${colorShadow}] max-w-3xs overflow-hidden `}>
+        md:rounded-md max-w-3xs overflow-hidden `}>
         <header className=' grow-3'>
             <img className='w-full' src={img} alt={imgAlt} />
         </header>
