@@ -20,15 +20,15 @@ function Presentation() {
                                 </h1>
                                 <h2 className="dark:text-darkText-primary">Agustin Gutierrez</h2>
                             </div>
-                            <img src={ImgMorty} alt="Una imagen de ejemplo de Morty" className=" rounded-full w-24 h-24" />
+                            <img fetchPriority="high" src={ImgMorty} alt="Una imagen de ejemplo de Morty" className=" rounded-full w-24 h-24" />
                         </header>
                         <p className="dark:text-darkText-primary" data-aos="fade-up">
                             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore quae facere repellat hic voluptatum asperiores minus reiciendis dolores recusandae, cumque optio? Explicabo
                         </p>
                         <nav className="pt-4" data-aos="fade-up">
                             <ul className="flex justify-items-start items-center flex-wrap gap-2">
-
-                                <a target="_blank" href="https://github.com/Agustin-0"
+                                <li>
+                                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/Agustin-0"
                                     className="group flex items-center gap-1 border p-2 rounded-4xl text-lightText-primary border-lightText-primary hover:bg-darkmode-secundary
                                      dark:text-darkText-primary dark:border-darkText-primary dark:hover:bg-lightmode-primary 
                                     transition duration-300 sm:cursor-pointer">
@@ -37,9 +37,11 @@ function Presentation() {
                                     <span className="text-lightText-primary group-hover:text-lightmode-primary dark:text-darkText-primary dark:group-hover:text-lightText-primary">
                                         GitHub
                                     </span>
-                                </a>
+                                    </a>
+                                </li>
                                 
-                                <a target="_blank" href="https://www.linkedin.com/in/agustin-undefined-532809421/"
+                                <li>
+                                    <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/agustin-undefined-532809421/"
                                     className="group flex items-center gap-1 border p-2 rounded-4xl text-lightText-primary border-lightText-primary hover:bg-darkmode-secundary
                                      dark:text-darkText-primary dark:border-darkText-primary dark:hover:bg-lightmode-primary 
                                     transition duration-300 sm:cursor-pointer">
@@ -48,9 +50,11 @@ function Presentation() {
                                     <span className="text-lightText-primary group-hover:text-lightmode-primary dark:text-darkText-primary dark:group-hover:text-lightText-primary">
                                         Linkedin
                                     </span>
-                                </a>
+                                    </a>
+                                </li>
                                 
-                                <a target="_blank" href={`mailto:tucorreo@gmail.com?subject=${emailSubject}&body=${emailBody}`}
+                                <li>
+                                    <a target="_blank" rel="noopener noreferrer" href={`mailto:tucorreo@gmail.com?subject=${emailSubject}&body=${emailBody}`}
                                     className="group flex items-center gap-1 border p-2 rounded-4xl text-lightText-primary border-lightText-primary hover:bg-darkmode-secundary
                                      dark:text-darkText-primary dark:border-darkText-primary dark:hover:bg-lightmode-primary 
                                     transition duration-300 sm:cursor-pointer">
@@ -59,8 +63,8 @@ function Presentation() {
                                     <span className="text-lightText-primary group-hover:text-lightmode-primary dark:text-darkText-primary dark:group-hover:text-lightText-primary">
                                         Contacto
                                     </span>
-                                </a>
-
+                                    </a>
+                                </li>
                             </ul>
                         </nav>
                     </div>
